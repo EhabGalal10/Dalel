@@ -17,8 +17,6 @@ class _SplashViewState extends State<SplashView> {
     super.initState();
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,14 +29,15 @@ class _SplashViewState extends State<SplashView> {
     );
   }
 }
-  void delayedNavigate(context) {
-    Future.delayed(
-      const Duration(seconds: 2),
-      () {
-        customNavigate(
-          context,
-          '/onBording',
-        );
-      },
-    );
-  }
+
+void delayedNavigate(context) {
+  Future.delayed(
+    const Duration(seconds: 2),
+    () {
+      customReplacementNavigate(
+        context,
+        '/onBording',
+      );
+    },
+  );
+}
